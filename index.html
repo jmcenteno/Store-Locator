@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>Store Locator</title>
+<meta charset="utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="lib/store-locator/css/store-locator.css">
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="lib/jquery/jquery.validate.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+	<script type="text/javascript" src="lib/store-locator/js/store-locator.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+<body>
+
+<div id="store-locator">
+			
+	<div class="store-locator">
+
+		<form autocomplete="off" onsubmit="return false;">
+			<input type="text" name="address" id="address" size="15" placeholder="City, State, or Zip Code" class="controls" required />				
+			<select name="radius" id="radius" class="controls" onchange="ConvertRadius(this.value); LocateStores(document.getElementById('address').value);">
+				<option value="5">Within 5 Miles</option>
+				<option value="10">Within 10 Miles</option>
+				<option value="25">Within 25 Miles</option>
+				<option value="50">Within 50 Miles</option>
+			</select>				
+		</form>
+	
+		<div class="map" id="map-canvas"></div>
+	
+    	<div class="store-locations">
+            <div id="locations" class="scroller"></div>
+        </div>
+		
+		<div class="clearfix"></div>
+		
+	</div>
+	
+</div>
+
+</body>
+</html>

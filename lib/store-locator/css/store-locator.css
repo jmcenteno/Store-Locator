@@ -1,0 +1,80 @@
+.store-locator {
+	width:1024px;
+	height:600px;
+}
+.store-locator .map {
+    width: 70%;
+	height:100%;
+	float:left;
+}
+
+.store-locator .map .gm-style img {
+	max-width:none !important;
+}
+
+.store-locator form {
+    margin-bottom: 20px;
+}
+
+.store-locator .controls {
+    margin-right: 10px;
+	margin-top: 16px;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	background-color: #fff;
+	padding: 8px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 300;
+	text-overflow: ellipsis;
+	height: 42px;
+}
+
+.store-locator .controls:focus {
+	border-color: #4d90fe;
+}
+
+.store-locator input[type=text] {
+	width: 300px;
+}
+
+.store-locator .store-locations {
+	width:30%;
+	float:left;
+}
+.store-locator .store-locations .scroller {
+	height:600px;
+	overflow-y:auto;
+	background-color:#EFEFEF;
+}
+.store-locator .store-locations .store {
+	padding:20px;
+	border-top:solid 1px #ccc;
+	font-size:14px;
+	cursor:default;
+	transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	-webkit-transition:all 0.2s ease-out;
+	-o-transition:all 0.2s ease-out;
+}
+.store-locator .store-locations .store:first-child {
+	border-top:none;
+}
+.store-locator .store-locations .store:hover {
+	background-color:rgba(255,255,255,0.5);
+}
+.store-locator .store-locations .store .store-name {
+	 font-weight:bold;
+	 margin-bottom:8px;
+}
+.store-locator .store-locations .store .store-address {
+	margin-bottom:12px;
+}
+.store-locator .store-locations .store .store-address .street-address {
+	display:block;
+	margin-bottom:4px;
+}
+

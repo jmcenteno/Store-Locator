@@ -1,0 +1,17 @@
+{
+  "name": "store-locator",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-uglify": "*",
+    "matchdep": "*"
+  },
+  "dependencies": {
+    "connect": "^3.3.5",
+    "serve-static": "^1.9.3"
+  }
+}

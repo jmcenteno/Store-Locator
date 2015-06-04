@@ -1,0 +1,21 @@
+{
+  "name": "store-locator",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jmcenteno/store-locator",
+  "authors": [
+    "Jose Centeno <jmcenteno@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap-sass": "~3.3.4"
+  }
+}

@@ -17,13 +17,15 @@
 			
 	<div class="store-locator">
 
-		<input type="text" name="address" id="address" size="15" placeholder="City, State, or Zip Code" class="controls" required />				
-		<select name="radius" id="radius" class="controls" onchange="ConvertRadius(this.value); LocateStores(document.getElementById('address').value);">
-			<option value="5">Within 5 Miles</option>
-			<option value="10">Within 10 Miles</option>
-			<option value="25">Within 25 Miles</option>
-			<option value="50">Within 50 Miles</option>
-		</select>				
+		<form class="hide">
+			<input type="text" name="address" id="address" size="15" placeholder="City, State, or Zip Code" class="controls" required />				
+			<select name="radius" id="radius" class="controls" onchange="ConvertRadius(this.value); LocateStores(document.getElementById('address').value);">
+				<option value="5">Within 5 Miles</option>
+				<option value="10">Within 10 Miles</option>
+				<option value="25">Within 25 Miles</option>
+				<option value="50">Within 50 Miles</option>
+			</select>	
+		</form>			
 		
 		<div class="map" id="map-canvas"></div>
 		

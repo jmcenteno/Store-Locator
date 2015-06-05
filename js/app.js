@@ -19,13 +19,17 @@ window.onload = function() {
 function LocateStores(address) {
 
 	if (address != '') {
-		_storeLocator.search(address);
+		_storeLocator.search(address); 
 	}
 	
 }
 
 function ConvertRadius(miles) {
     _storeLocator.radius = _storeLocator.milesToMeters(miles);
+}
+
+function toggleMenu() {
+	_storeLocator.showLocations();
 }
 
 /*
@@ -146,7 +150,7 @@ function StoreLocator(input) {
 					
 					if (status == google.maps.places.PlacesServiceStatus.OK) {
 						
-						jQuery('#locations .store').remove();
+						jQuery('.store-locations .store').remove();
 						
 						for (var i = 0; i < results.length; i++) {
                       		service.getDetails({ reference: results[i].reference }, $this.createMarker);                            
@@ -155,10 +159,13 @@ function StoreLocator(input) {
 						var center = $this.getMapCenter(results);						
 						
 						$this.map.fitBounds(center.bounds);
+
+						jQuery('.store-locations .menu-toggle').addClass('show');
 						
 					} else {
 						
 						//$this.destroy()
+						jQuery('.store-locations .menu-toggle').removeClass('show');
 						alert('No locations found in your area.');
 						
 					}
@@ -187,21 +194,6 @@ function StoreLocator(input) {
 			position: place.geometry.location
 		});
 		
-		google.maps.event.addListener(marker, 'click', function() {
-						
-			var content = jQuery('<div/>').css({ 'min-width': 250, 'min-height': 100 });
-			content.append(jQuery('<h3/>').css({ 'margin': '0 0 8px' }).text(place.name));
-			content.append(jQuery('<div/>', { 'class': 'formatted-address' }).css({ 'margin': '0 0 8px' }).html(place.adr_address.replace(/,/g, '')));
-			content.append(jQuery('<div/>').css({ 'margin': '0 0 8px' }).html('<strong>Phone Number: </strong>' + place.formatted_phone_number));
-			
-			content.find('.formatted-address .street-address').css({ 'display': 'block' });
-			content.find('.formatted-address .country-name').remove();
-			
-			$this.infoWindow.setContent(content.get(0));
-			$this.infoWindow.open($this.map, this);
-			
-		});
-		
 		$this.markers.push(marker);
 	
 		var store = jQuery('<div/>', { 'class': 'store', 'data-index': ($this.markers.length - 1) });
@@ -213,15 +205,26 @@ function StoreLocator(input) {
 		}
 		
 		store.on('mouseenter', function(e) {
+		
 			_storeLocator.markers[jQuery(this).data('index')].setAnimation(google.maps.Animation.BOUNCE);
+		
 		}).on('mouseleave', function(e) {
+		
 			_storeLocator.markers[jQuery(this).data('index')].setAnimation(null);
+		
+		}).on('click', function(e) {
+
+			jQuery(this).addClass('active').siblings().removeClass('active');
+
+			var center = _storeLocator.markers[jQuery(this).data('index')].getPosition();
+			$this.map.setCenter(center);
+		
 		});
 		
 		store.find('.locality').append(', ');
 		store.find('.country-name').remove();
 		
-		jQuery('#locations').append(store);
+		jQuery('.store-locations .scroller-content').append(store);
 	
 	};
 	
@@ -278,6 +281,10 @@ function StoreLocator(input) {
             LatLng: new google.maps.LatLng((latitude.low + latitude.high) / 2, (longitude.low + longitude.high) / 2)
         };
         
+    };
+
+    $this.showLocations = function() {
+    	jQuery('.store-locations').toggleClass('open');
     };
 	
 }

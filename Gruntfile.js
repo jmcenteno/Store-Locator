@@ -28,9 +28,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-		/* Javascript files */
-		
-        concat: { 
+		concat: { 
             dist: {
 	            src: [
 	            	'lib/jquery/dist/jquery.min.js'
@@ -38,6 +36,7 @@ module.exports = function(grunt) {
 	            dest: 'js/dependencies.js'
             }            
         },
+
         uglify: {
 	        build: {
 		        src: 'js/dependencies.js',
@@ -45,15 +44,13 @@ module.exports = function(grunt) {
 	        }	        
         },
 		
-		/* Run tasks when needed */
-
 		watch: {
 			css: {
 				files: ['css/**/*.css'],
 				options: { livereload: true }
 			},
             js: {
-                files: ['js/*.js'],
+                files: ['js/app.js'],
                 tasks: ['concat', 'uglify'],
                 options: { livereload: true }
             },

@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
 <head>
-<title>Store Locator</title>
-<meta charset="utf-8" />
+	
+	<title>Store Locator</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
@@ -12,32 +14,31 @@
 
 </head>
 <body>
-
-<div id="store-locator">
 			
 	<div class="store-locator">
 
-		<form autocomplete="off" onsubmit="return false;">
-			<input type="text" name="address" id="address" size="15" placeholder="City, State, or Zip Code" class="controls" required />				
-			<select name="radius" id="radius" class="controls" onchange="ConvertRadius(this.value); LocateStores(document.getElementById('address').value);">
-				<option value="5">Within 5 Miles</option>
-				<option value="10">Within 10 Miles</option>
-				<option value="25">Within 25 Miles</option>
-				<option value="50">Within 50 Miles</option>
-			</select>				
-		</form>
-	
-		<div class="map" id="map-canvas"></div>
-	
-    	<div class="store-locations">
-            <div id="locations" class="scroller"></div>
-        </div>
+		<input type="text" name="address" id="address" size="15" placeholder="City, State, or Zip Code" class="controls" required />				
+		<select name="radius" id="radius" class="controls" onchange="ConvertRadius(this.value); LocateStores(document.getElementById('address').value);">
+			<option value="5">Within 5 Miles</option>
+			<option value="10">Within 10 Miles</option>
+			<option value="25">Within 25 Miles</option>
+			<option value="50">Within 50 Miles</option>
+		</select>				
 		
-		<div class="clearfix"></div>
+		<div class="map" id="map-canvas"></div>
+		
+		<div class="store-locations">
+    	    <div id="locations" class="scroller">
+    	    	<div class="scroller-content"></div>
+    	    </div>
+	   	    <button type="button" class="menu-toggle" onclick="toggleMenu()">
+	    		<i class="ion-android-more-vertical icon open"></i>
+	    		<i class="ion-android-close icon close"></i>
+	    	</button>
+    	</div>
 		
 	</div>
 	
-</div>
 
 </body>
 </html>

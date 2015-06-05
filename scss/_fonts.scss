@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/opensans/opensans-regular-webfont.eot');
+    src: url('../fonts/opensans/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans/opensans-regular-webfont.woff') format('woff'),
+         url('../fonts/opensans/opensans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/opensans/opensans-regular-webfont.svg#open_sansregular') format('svg');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/opensans/opensans-light-webfont.eot');
+    src: url('../fonts/opensans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/opensans/opensans-light-webfont.woff') format('woff'),
+         url('../fonts/opensans/opensans-light-webfont.ttf') format('truetype'),
+         url('../fonts/opensans/opensans-light-webfont.svg#open_sansregular') format('svg');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/opensans/opensans-bold-webfont.eot');
+    src: url('../fonts/opensans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans/opensans-bold-webfont.woff2') format('woff2'),
+         url('../fonts/opensans/opensans-bold-webfont.woff') format('woff'),
+         url('../fonts/opensans/opensans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/opensans/opensans-bold-webfont.svg#open_sansregular') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto_slab/robotoslab-regular-webfont.eot');
+    src: url('../fonts/roboto_slab/robotoslab-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto_slab/robotoslab-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto_slab/robotoslab-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto_slab/robotoslab-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto_slab/robotoslab-regular-webfont.svg#montserratregular') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/roboto_slab/robotoslab-light-webfont.eot');
+    src: url('../fonts/roboto_slab/robotoslab-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto_slab/robotoslab-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto_slab/robotoslab-light-webfont.woff') format('woff'),
+         url('../fonts/roboto_slab/robotoslab-light-webfont.ttf') format('truetype'),
+         url('../fonts/roboto_slab/robotoslab-light-webfont.svg#montserratregular') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    src:    url('../fonts/roboto_slab/robotoslab-bold-webfont.eot');
+    src:    url('../fonts/roboto_slab/robotoslab-bold-webfont.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/roboto_slab/robotoslab-bold-webfont.woff2') format('woff2'),
+            url('../fonts/roboto_slab/robotoslab-bold-webfont.woff') format('woff'),
+            url('../fonts/roboto_slab/robotoslab-bold-webfont.ttf') format('truetype'),
+            url('../fonts/roboto_slab/robotoslab-bold-webfont.svg#montserratbold') format('svg');
+}

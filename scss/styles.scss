@@ -1,85 +1,190 @@
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../lib/ionicons/scss/ionicons';
+
+@import 'fonts';
+@import 'variables';
+
+body {
+	font-family: $main-font;
+	font-size: 14px;
+	color: $main-text-color;
+}
 
 .store-locator {
-	width:1024px;
-	height:600px;
-
+	overflow: hidden;
+			
 	.map {
-    	width: 70%;
-		height:100%;
-		float:left;
-	
+    	width: 100%;
+    	position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+
 		.gm-style img {
-			max-width:none !important;
+			max-width: none !important;
 		}
 
 	}
 
 	form {
 	    margin-bottom: 20px;
+	}
 	
-	    .controls {
-	    	margin-right: 10px;
-			margin-top: 16px;
-			border: 1px solid transparent;
-			box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			outline: none;
-			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-			background-color: #fff;
-			padding: 8px;
-			font-family: Roboto;
-			font-size: 16px;
-			font-weight: 300;
-			text-overflow: ellipsis;
-			height: 42px;
-		
+	.controls {
+    	margin-right: 10px;
+		margin-top: 16px;
+		border: 1px solid transparent;
+		outline: none;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+		background-color: $white;
+		padding: 8px;
+		font-family: $main-font;
+		font-size: 16px;
+		font-weight: 300;
+		text-overflow: ellipsis;
+		height: 42px;
 
-			&:focus {
-				border-color: #4d90fe;
-			}
+		&:focus {
+			border-color: #4d90fe;
 		}
 		
-		input[type=text] {
-			width: 300px;
+		&[type=text] {
+			min-width: 300px;
+			max-width: 480px;
+			width: 30%;
 		}
 
 	}
 
 	.store-locations {
-		width:30%;
-		float:left;
-	
-		.scroller {
-			height:600px;
-			overflow-y:auto;
-			background-color:#EFEFEF;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: -320px;
+		width: 320px;
+		@include transition(right 400ms ease-in-out);
+
+		.menu-toggle {
+			width: 50px;
+			height: 50px;
+			font-size: 2.4em;
+			line-height: 1.2em;
+			border-radius: 50%;
+			position: absolute;
+			top: -100px;
+			left: -100px;
+			z-index: 100;
+			box-shadow: 3px 3px 5px rgba($black, 0.2);
+			outline: none !important;
+			background-color: $white;
+			border: none;
+			@include transition(all 250ms ease-in-out);
+			
+			&.show {
+				top: 30px;
+			}
+
+			.icon {
+
+				&.close {
+					display: none;
+					float: none;
+					font-size: 1.8em;
+					opacity: 1;
+					text-shadow: none;
+				}
+
+			}
+
+			&:active {
+				color: $white;
+				background-color: $brand-info;				
+			}
+
 		}
-		.store {
-			padding:20px;
-			border-top:solid 1px #ccc;
-			font-size:14px;
-			cursor:default;
-			transition:all 0.2s ease-out;
-			-moz-transition:all 0.2s ease-out;
-			-webkit-transition:all 0.2s ease-out;
-			-o-transition:all 0.2s ease-out;
+
+		&.open {
+			right: 0;
+
+			.menu-toggle {
+				width: 40px;
+				height: 40px;
+				font-size: 1em;
+				left: -20px;
+				background-color: $brand-danger;
+
+				.icon {
+					margin-left: 0;
+
+					&.close {
+						display: inline-block;
+						color: $white !important;
+					}
+
+					&.open {
+						display: none;
+					}
+
+				}
+
+			}
+
+		}
+
+		.scroller {
+			height: 100%;
+			overflow-y: auto;
+			background-color: rgba($white, 0.87);
+			position: relative;
+		}
 		
+		.store {
+			padding: 20px 35px;
+			border-top: solid 1px darken($white, 15%);
+			cursor: pointer;
+			@include transition(all 0.2s ease-out);
 		
 			&:first-child {
-				border-top:none;
+				border-top: none;
+			}
+
+			&:before {
+				content: "";
+				background-color: transparent;
+				width: 5px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
 			}
 			
 			&:hover {
-				background-color:rgba(255,255,255,0.5);
+				position: relative;
+				background-color: rgba($brand-info, 0.87);
+				color: $white;
+
+				&:before {
+					background-color: $brand-primary;
+					@include transition(background-color 0.2s ease-out);
+				}
+
+			}
+
+			&.active {
+				background-color: $brand-primary;
+				color: $white !important;
 			}
 		
 			.store-name {
-				font-weight:bold;
-				margin-bottom:8px;
+				font-family: $alt-font;
+				font-weight: 700;
+				font-size: 1.4em;
+				margin-bottom: 8px;
 			}
 			.store-address {
 				margin-bottom:12px;
+				font-size: 0.9em;
 			}
 			.store-address .street-address {
 				display:block;

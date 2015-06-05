@@ -8573,10 +8573,10 @@ button.close {
   https://twitter.com/benjsperry  https://twitter.com/ionicframework
   MIT License: https://github.com/driftyco/ionicons
 
-  Android-style icons originally built by GoogleΓÇÖs
+  Android-style icons originally built by Google’s
   Material Design Icons: https://github.com/google/material-design-icons
   used under CC BY http://creativecommons.org/licenses/by/4.0/
-  Modified icons to fit ioniconΓÇÖs grid from original.
+  Modified icons to fit ionicon’s grid from original.
 */
 @font-face {
   font-family: "Ionicons";
@@ -13065,10 +13065,6 @@ body {
   max-width: none !important;
 }
 /* line 30, ../scss/styles.scss */
-.store-locator form {
-  margin-bottom: 20px;
-}
-/* line 34, ../scss/styles.scss */
 .store-locator .controls {
   margin-right: 10px;
   margin-top: 16px;
@@ -13083,17 +13079,17 @@ body {
   text-overflow: ellipsis;
   height: 42px;
 }
-/* line 48, ../scss/styles.scss */
+/* line 44, ../scss/styles.scss */
 .store-locator .controls:focus {
   border-color: #4d90fe;
 }
-/* line 52, ../scss/styles.scss */
+/* line 48, ../scss/styles.scss */
 .store-locator .controls[type=text] {
   min-width: 300px;
   max-width: 480px;
   width: 30%;
 }
-/* line 60, ../scss/styles.scss */
+/* line 56, ../scss/styles.scss */
 .store-locator .store-locations {
   position: fixed;
   top: 0;
@@ -13104,7 +13100,7 @@ body {
   -o-transition: right 400ms ease-in-out;
   transition: right 400ms ease-in-out;
 }
-/* line 68, ../scss/styles.scss */
+/* line 64, ../scss/styles.scss */
 .store-locator .store-locations .menu-toggle {
   width: 50px;
   height: 50px;
@@ -13123,11 +13119,11 @@ body {
   -o-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
-/* line 84, ../scss/styles.scss */
+/* line 80, ../scss/styles.scss */
 .store-locator .store-locations .menu-toggle.show {
   top: 30px;
 }
-/* line 90, ../scss/styles.scss */
+/* line 86, ../scss/styles.scss */
 .store-locator .store-locations .menu-toggle .icon.close {
   display: none;
   float: none;
@@ -13135,16 +13131,16 @@ body {
   opacity: 1;
   text-shadow: none;
 }
-/* line 100, ../scss/styles.scss */
+/* line 96, ../scss/styles.scss */
 .store-locator .store-locations .menu-toggle:active {
   color: #fff;
   background-color: #5bc0de;
 }
-/* line 107, ../scss/styles.scss */
+/* line 103, ../scss/styles.scss */
 .store-locator .store-locations.open {
   right: 0;
 }
-/* line 110, ../scss/styles.scss */
+/* line 106, ../scss/styles.scss */
 .store-locator .store-locations.open .menu-toggle {
   width: 40px;
   height: 40px;
@@ -13152,27 +13148,27 @@ body {
   left: -20px;
   background-color: #d9534f;
 }
-/* line 117, ../scss/styles.scss */
+/* line 113, ../scss/styles.scss */
 .store-locator .store-locations.open .menu-toggle .icon {
   margin-left: 0;
 }
-/* line 120, ../scss/styles.scss */
+/* line 116, ../scss/styles.scss */
 .store-locator .store-locations.open .menu-toggle .icon.close {
   display: inline-block;
   color: #fff !important;
 }
-/* line 125, ../scss/styles.scss */
+/* line 121, ../scss/styles.scss */
 .store-locator .store-locations.open .menu-toggle .icon.open {
   display: none;
 }
-/* line 135, ../scss/styles.scss */
+/* line 131, ../scss/styles.scss */
 .store-locator .store-locations .scroller {
   height: 100%;
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.87);
   position: relative;
 }
-/* line 142, ../scss/styles.scss */
+/* line 138, ../scss/styles.scss */
 .store-locator .store-locations .store {
   padding: 20px 35px;
   border-top: solid 1px #d9d9d9;
@@ -13181,11 +13177,11 @@ body {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 148, ../scss/styles.scss */
+/* line 144, ../scss/styles.scss */
 .store-locator .store-locations .store:first-child {
   border-top: none;
 }
-/* line 152, ../scss/styles.scss */
+/* line 148, ../scss/styles.scss */
 .store-locator .store-locations .store:before {
   content: "";
   background-color: transparent;
@@ -13195,37 +13191,37 @@ body {
   top: 0;
   left: 0;
 }
-/* line 162, ../scss/styles.scss */
+/* line 158, ../scss/styles.scss */
 .store-locator .store-locations .store:hover {
   position: relative;
   background-color: rgba(91, 192, 222, 0.87);
   color: #fff;
 }
-/* line 167, ../scss/styles.scss */
+/* line 163, ../scss/styles.scss */
 .store-locator .store-locations .store:hover:before {
   background-color: #337ab7;
   -webkit-transition: background-color 0.2s ease-out;
   -o-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
 }
-/* line 174, ../scss/styles.scss */
+/* line 170, ../scss/styles.scss */
 .store-locator .store-locations .store.active {
   background-color: #337ab7;
   color: #fff !important;
 }
-/* line 179, ../scss/styles.scss */
+/* line 175, ../scss/styles.scss */
 .store-locator .store-locations .store .store-name {
   font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
   font-size: 1.4em;
   margin-bottom: 8px;
 }
-/* line 185, ../scss/styles.scss */
+/* line 181, ../scss/styles.scss */
 .store-locator .store-locations .store .store-address {
   margin-bottom: 12px;
   font-size: 0.9em;
 }
-/* line 189, ../scss/styles.scss */
+/* line 185, ../scss/styles.scss */
 .store-locator .store-locations .store .store-address .street-address {
   display: block;
   margin-bottom: 4px;

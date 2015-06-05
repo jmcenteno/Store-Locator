@@ -17,6 +17,7 @@ Experimental project that searches for stores within a given radius using the Go
   ```var input = { store: '[Store Name]', ... };```
 	
 You can start a local web server to preview the map by running ```$ node server.js``` in the command line.
+The server runs on http://localhost:8000/.
 	
 	
 Enjoy!

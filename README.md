@@ -1,6 +1,6 @@
 # store-locator
 
-Experimental project that searches for stores within a given radius. 
+Experimental project that searches for stores within a given radius using the Google Maps API and Google Places Library. 
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ Experimental project that searches for stores within a given radius.
 
   ```var input = { store: '[Store Name]', ... };```
 	
-You can start a local server to preview the map by running ```$ node server.js``` in the command line.
+You can start a local web server to preview the map by running ```$ node server.js``` in the command line.
 	
 	
 Enjoy!

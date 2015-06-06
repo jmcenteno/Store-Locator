@@ -8573,10 +8573,10 @@ button.close {
   https://twitter.com/benjsperry  https://twitter.com/ionicframework
   MIT License: https://github.com/driftyco/ionicons
 
-  Android-style icons originally built by Google’s
+  Android-style icons originally built by GoogleΓÇÖs
   Material Design Icons: https://github.com/google/material-design-icons
   used under CC BY http://creativecommons.org/licenses/by/4.0/
-  Modified icons to fit ionicon’s grid from original.
+  Modified icons to fit ioniconΓÇÖs grid from original.
 */
 @font-face {
   font-family: "Ionicons";
@@ -13096,66 +13096,66 @@ body {
   bottom: 0;
   right: -320px;
   width: 320px;
-  -webkit-transition: right 400ms ease-in-out;
-  -o-transition: right 400ms ease-in-out;
-  transition: right 400ms ease-in-out;
+  -webkit-transition: right 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: right 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: right 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 /* line 64, ../scss/styles.scss */
 .store-locator .store-locations .menu-toggle {
-  width: 50px;
-  height: 50px;
-  font-size: 2.4em;
+  width: 40px;
+  height: 40px;
+  font-size: 2.2em;
   line-height: 1.2em;
   border-radius: 50%;
   position: absolute;
-  top: -100px;
+  top: 30px;
   left: -100px;
   z-index: 100;
   box-shadow: 3px 3px 5px rgba(33, 33, 33, 0.2);
   outline: none !important;
   background-color: #fff;
   border: none;
-  -webkit-transition: all 250ms ease-in-out;
-  -o-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
+  display: none;
+  -webkit-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-/* line 80, ../scss/styles.scss */
+/* line 81, ../scss/styles.scss */
 .store-locator .store-locations .menu-toggle.show {
-  top: 30px;
+  display: block;
 }
-/* line 86, ../scss/styles.scss */
+/* line 87, ../scss/styles.scss */
 .store-locator .store-locations .menu-toggle .icon.close {
   display: none;
   float: none;
-  font-size: 1.8em;
   opacity: 1;
   text-shadow: none;
+  font-size: 1em;
 }
-/* line 96, ../scss/styles.scss */
+/* line 97, ../scss/styles.scss */
 .store-locator .store-locations .menu-toggle:active {
   color: #fff;
   background-color: #5bc0de;
 }
-/* line 103, ../scss/styles.scss */
+/* line 104, ../scss/styles.scss */
 .store-locator .store-locations.open {
   right: 0;
 }
-/* line 106, ../scss/styles.scss */
+/* line 107, ../scss/styles.scss */
 .store-locator .store-locations.open .menu-toggle {
-  width: 40px;
-  height: 40px;
-  font-size: 1em;
-  left: -20px;
   background-color: #d9534f;
+  left: -20px;
+  line-height: 0.8em;
 }
-/* line 113, ../scss/styles.scss */
+/* line 112, ../scss/styles.scss */
 .store-locator .store-locations.open .menu-toggle .icon {
   margin-left: 0;
 }
-/* line 116, ../scss/styles.scss */
+/* line 115, ../scss/styles.scss */
 .store-locator .store-locations.open .menu-toggle .icon.close {
   display: inline-block;
   color: #fff !important;
+  left: -20px;
 }
 /* line 121, ../scss/styles.scss */
 .store-locator .store-locations.open .menu-toggle .icon.open {

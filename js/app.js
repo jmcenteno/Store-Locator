@@ -4,7 +4,7 @@ var input = {
 		address: 'address',
 		radius: 'radius'
 	},
-	store: 'CVS', 
+	store: 'CVS Pharmacy', 
 	radius: 5, 
 	country: 'United States'
 };
@@ -323,27 +323,42 @@ function StoreLocator(input) {
 				var request = {
 					location: LatLng,
 					radius: $this.radius,
-					name: input.store
+					name: input.store,
+					types: ['store']
 				};
 							
 				var service = new google.maps.places.PlacesService($this.map);
 				
-				service.nearbySearch(request, function(results, status) {
+				service.radarSearch(request, function(results, status) {
 					
 					if (status == google.maps.places.PlacesServiceStatus.OK) {
 						
 						jQuery('.store-locations .store').remove();
 						
-						for (var i = 0; i < results.length; i++) {
-                      		service.getDetails({ reference: results[i].reference }, $this.createMarker);                            
-						}
-						
+						var counter = 0;
+						console.log(results.length);
+
 						var center = $this.getMapCenter(results);						
 						
 						$this.map.fitBounds(center.bounds);
 
-						jQuery('.store-locations').addClass('open');
-						jQuery('.store-locations .menu-toggle').addClass('show');
+						var t = setInterval(function() {
+
+							if (counter > results.length-1) {
+								
+								clearInterval(t);
+
+								jQuery('.store-locations').addClass('open');
+								jQuery('.store-locations .menu-toggle').addClass('show');
+
+								return;
+								
+							}
+
+	                      	service.getDetails({ reference: results[counter].reference }, $this.createMarker);
+	                      	counter++;	                      	
+
+						}, 200);
 						
 					} else {
 						
@@ -378,8 +393,13 @@ function StoreLocator(input) {
 		var marker = new google.maps.Marker({
 			map: $this.map,
 			title: place.name,
-			position: place.geometry.location
+			position: place.geometry.location,
+			animation: google.maps.Animation.DROP
 		});
+
+		google.maps.event.addListener(marker, 'click', function() {
+			console.log(this)
+		})
 		
 		$this.markers.push(marker);
 	

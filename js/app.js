@@ -394,7 +394,8 @@ function StoreLocator(input) {
 			map: $this.map,
 			title: place.name,
 			position: place.geometry.location,
-			animation: google.maps.Animation.DROP
+			animation: google.maps.Animation.DROP,
+			icon: 'img/marker.png'
 		});
 
 		google.maps.event.addListener(marker, 'click', function() {

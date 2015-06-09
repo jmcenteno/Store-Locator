@@ -415,7 +415,8 @@ function StoreLocator(input) {
 		store.on('mouseenter', function(e) {
 		
 			_storeLocator.markers[jQuery(this).data('index')].setAnimation(google.maps.Animation.BOUNCE);
-		
+			_storeLocator.markers[jQuery(this).data('index')].setZIndex(_storeLocator.markers.length);
+
 		}).on('mouseleave', function(e) {
 		
 			_storeLocator.markers[jQuery(this).data('index')].setAnimation(null);

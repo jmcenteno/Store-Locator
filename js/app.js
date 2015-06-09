@@ -425,7 +425,7 @@ function StoreLocator(input) {
 			jQuery(this).addClass('active').siblings().removeClass('active');
 
 			var center = _storeLocator.markers[jQuery(this).data('index')].getPosition();
-			$this.map.setCenter(center);
+			$this.map.panTo(center);
 		
 		});
 		
